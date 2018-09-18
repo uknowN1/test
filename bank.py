@@ -1,7 +1,7 @@
-print("**Vällkommen till din bank**")
-
+print("*** Vällkommen till din bank ***")
+saldo = 0
 insattning = 0
-uttag =0
+uttag = 0
 meny = 0
 while meny != 4:
     print("1. Visa slado")
@@ -15,11 +15,13 @@ while meny != 4:
         print("Du måste ange en siffra!")
 
     if meny == 3:
-        Insättning += input("Ange en saldo")
+        insattning = input("Ange en siffra") 
+        saldo = saldo + int(insattning)
     elif meny == 2:
-        Uttag += input("Ange en saldo")
+        uttag = input("Ange det du är skyldig")
+        saldo = saldo - int(uttag)
     elif meny == 1:
-        print("Din saldo:" (insattning + uttag))
+        print("Din saldo:" ,saldo)
     elif meny == 4:
         print("Vällkommen åter")
     else:
